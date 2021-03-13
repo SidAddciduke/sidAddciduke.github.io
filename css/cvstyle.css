@@ -1,0 +1,203 @@
+body{
+  background-image:url("https://us.123rf.com/450wm/strizh/strizh1602/strizh160200071/51754273-vector-de-onda-de-color-liso-abstracto-flujo-curva-azul-ilustraci%C3%B3n-de-movimiento.jpg?ver=6");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+h1{
+  margin-top: 25px;
+  font-family: 'Abril Fatface', cursivo;
+  text-align: center;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.59);
+  font-size: 48pt;
+}
+h2{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.59);
+  color:#FFFFFF;
+  font-size: 20pt;
+}
+
+header{
+  color:rgb(0, 0, 0);
+  padding: 30px;
+  background-image:url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-shadow: 2px 2px 4px black;
+}
+.contenedor-main{
+  height: 1400px;
+}
+section{
+  height: 70%;
+}
+#logo{
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+  margin-top:8em;
+}
+.row{
+  height: 100%;
+  border-radius:20px;
+}
+h3{
+  text-align: center;
+  margin-top: 2em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 48pt;
+}
+h4{
+  text-align: center;
+  margin-top: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24pt;
+}
+footer{
+  font-size: 9pt;
+  margin:0;
+  height: 10%;
+  text-align: center;
+  background-color:rgba(143, 189, 201, 0.535);
+}
+p{
+  margin-top: 2em;
+  margin: 2em;
+  text-align: justify;
+}
+img{
+  border-radius: 50%;
+}
+h6{
+  color:rgba(231, 7, 7, 0.809);
+  font-size: 9pt;
+}
+
+/*
+=====
+DEPENDENCES
+=====
+*/
+
+.r-link{
+  display: var(--rLinkDisplay, inline-flex) !important;
+}
+
+.r-link[href]{
+  color: var(--rLinkColor) !important;
+  text-decoration: var(--rLinkTextDecoration, none) !important;
+}
+
+.r-list{
+  padding-left: var(--rListPaddingLeft, 0) !important;
+  margin-top: var(--rListMarginTop, 0) !important;
+  margin-bottom: var(--rListMarginBottom, 0) !important;
+  list-style: var(--rListListStyle, none) !important;
+}
+
+
+/*
+=====
+CORE STYLES
+=====
+*/
+
+.menu{
+  --rLinkColor: var(--menuLinkColor, currentColor);
+}
+
+.menu__link{
+  display: var(--menuLinkDisplay, block);
+}
+
+/* 
+focus state 
+*/
+
+.menu__link:focus{
+  outline: var(--menuLinkOutlineWidth, 2px) solid var(--menuLinkOutlineColor, currentColor);
+  outline-offset: var(--menuLinkOutlineOffset);
+}
+
+/* 
+fading siblings
+*/
+
+.menu:hover .menu__link:not(:hover){
+  --rLinkColor: var(--menuLinkColorUnactive, rgba(22, 22, 22, .35));
+}
+
+/*
+=====
+PRESENTATION STYLES
+=====
+*/
+
+.menu{
+  background-color: var(--menuBackgroundColor, #4fa2d381);
+  box-shadow: var(--menuBoxShadow, 0 1px 3px 0 rgba(0, 0, 0, .12), 0 1px 2px 0 rgba(0, 0, 0, .24));
+  border-radius: 10px;
+  font-family: 'Noticia Text', serif;
+}
+
+.menu__list{
+  display: flex;  
+}
+
+.menu__link{
+  padding: var(--menuLinkPadding, 1.5rem 2.5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* 
+=====
+TEXT UNDERLINED
+=====
+*/
+
+.text-underlined{
+  position: relative;
+  overflow: hidden;
+
+  will-change: color;
+  transition: color .25s ease-out;  
+}
+
+.text-underlined::before, 
+.text-underlined::after{
+  content: "";
+  width: 0;
+  height: 3px;
+  background-color: var(--textUnderlinedLineColor, currentColor);
+
+  will-change: width;
+  transition: width .1s ease-out;
+
+  position: absolute;
+  bottom: 0;
+}
+
+.text-underlined::before{
+  left: 50%;
+  transform: translateX(-50%); 
+}
+
+.text-underlined::after{
+  right: 50%;
+  transform: translateX(50%); 
+}
+
+.text-underlined:hover::before, 
+.text-underlined:hover::after{
+  width: 100%;
+  transition-duration: .2s;
+}
+img{
+  margin-right: 1em;
+}
